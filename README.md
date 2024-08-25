@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Docs web application that allows users to create, edit, and collaborate on rich text documents in real-time. It leverages modern web technologies, including **React** for the frontend, **Node.js** for the backend, **MongoDB** for data storage, **Socket.io** for real-time communication, **Material UI** for UI components, and **Quill** as the rich text editor.
+ Docs web application that allows users to create, edit, and collaborate on rich text documents in real-time. It leverages modern web technologies, including **React** for the frontend, **Node.js** for the backend, **MongoDB** for data storage, **Socket.io** for real-time communication, **Material UI** for UI components, and **Quill** as the rich text editor.
 
 ## Features
 
@@ -39,7 +39,7 @@ Ensure you have the following installed:
 
 ### Setup
 
-1. **Clone the repository:**
+1. Clone the repository:  
    ```bash
    git clone https://github.com/royaals/docs-webs.git
    ```
@@ -47,11 +47,16 @@ Ensure you have the following installed:
     ```bash
     cd backend
     npm install
-    
     ```
-3. Rename `.env.example` to `.env` in the backend folder and update the following values:
+3. Rename `.env.example` to `.env` in the backend folder:
 
     - `DB_URL`: This should be your MongoDB database URL. For example, if you're using Docker, it would look something like this: `mongodb://localhost:27017/mydatabase`. If you're using a Cloud Mongodb Atlas use the URL they provide. 
+
+   Using Docker for MongoDB:
+    ```bash
+    docker pull mongo
+    docker run -d -p 27017:27017 --name mongodb mongo
+    ```
 
 4. Navigate to the frontend directory and install the dependencies:
     ```bash
