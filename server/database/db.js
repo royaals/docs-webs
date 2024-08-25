@@ -2,14 +2,13 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
-const userName = process.env.DB_USERNAME;
-const passWord = process.env.DB_PASSWORD;
-const Connection = async () => {
-  //cloud database
 
-  const URL = `mongodb+srv://${userName}:${passWord}@docs.zjrlc.mongodb.net/`;
-  //local database
-  // const URL = `mongodb://localhost:27017/mydatabase`;
+const DB_url=process.env.DB_URL;
+const Connection = async () => {
+
+
+  const URL = DB_url;
+ 
   try {
     await mongoose.connect(URL);
     console.log("database connected");
